@@ -1,15 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -29,13 +22,13 @@ class _HomePageState extends State<HomePage> {
                 ) =>
                     [
                       const PopupMenuItem(
-                        child: Text('New Group'),
                         value: 1,
+                        child: Text('New Group'),
                       ),
-                      const PopupMenuItem(child: Text('Linked devices'), value: 2),
-                      const PopupMenuItem(child: Text('Starred Messages'), value: 3),
-                      const PopupMenuItem(child: Text('Settings'), value: 4),
-                      const PopupMenuItem(child: Text('Log out'), value: 5),
+                      const PopupMenuItem(value: 2, child: Text('Linked devices')),
+                      const PopupMenuItem(value: 3, child: Text('Starred Messages')),
+                      const PopupMenuItem(value: 4, child: Text('Settings')),
+                      const PopupMenuItem(value: 5, child: Text('Log out')),
                     ])
           ],
           bottom: TabBar(tabs: [
@@ -116,8 +109,8 @@ class _HomePageState extends State<HomePage> {
               Padding(
                 padding: const EdgeInsets.only(left: 15),
                 child: Row(
-                  children: [
-                    const Text('Recent updates',
+                  children: const [
+                    Text('Recent updates',
                         style: TextStyle(
                             fontWeight: FontWeight.bold, color: Colors.grey))
                   ],
@@ -225,34 +218,3 @@ class _HomePageState extends State<HomePage> {
   }
 }
 
-// children: [
-//               ListTile(
-//                 leading: CircleAvatar(
-//                     backgroundImage:
-//                         AssetImage('assets/images/WhatsappLogo.png')),
-//                 title: Text(
-//                   'My Status',
-//                   style: TextStyle(fontWeight: FontWeight.bold),
-//                 ),
-//                 subtitle: Text('Tap to add status update',
-//                     style: TextStyle(
-//                         fontWeight: FontWeight.bold, color: Colors.grey)),
-//               ),
-//               SizedBox(
-//                 height: 10,
-//               ),
-//               Padding(
-//                 padding: const EdgeInsets.only(left: 15),
-//                 child: Row(
-//                   children: [
-//                     Text('Recent updates',
-//                         style: TextStyle(
-//                             fontWeight: FontWeight.bold, color: Colors.grey))
-//                   ],
-//                 ),
-//               ),
-//               SizedBox(
-//                 height: 10,
-//               ),
-
-//             ],
