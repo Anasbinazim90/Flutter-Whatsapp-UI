@@ -75,7 +75,7 @@ class _HomePageState extends State<HomePage> {
         body: TabBarView(children: [
           //CAMERA
 
-          Center(child: Text('Camera will be opening soon')),
+          Center(child: Text('Camera will be opening soon!')),
 
           //CHATS
 
@@ -89,6 +89,7 @@ class _HomePageState extends State<HomePage> {
                 title: Text('Anas Bin Azim'),
                 subtitle: Text('The tea is fantastic'),
                 trailing: Text('12:35Pm'),
+
               );
             },
           ),
