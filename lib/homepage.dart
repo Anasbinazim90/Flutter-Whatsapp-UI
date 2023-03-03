@@ -16,33 +16,33 @@ class _HomePageState extends State<HomePage> {
       length: 4,
       child: Scaffold(
         appBar: AppBar(
-          title: Text(
+          title: const Text(
             'WhatsApp',
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
           actions: [
-            Icon(Icons.search),
+            const Icon(Icons.search),
             PopupMenuButton(
-                icon: Icon(Icons.more_vert_outlined),
+                icon: const Icon(Icons.more_vert_outlined),
                 itemBuilder: (
                   context,
                 ) =>
                     [
-                      PopupMenuItem(
+                      const PopupMenuItem(
                         child: Text('New Group'),
                         value: 1,
                       ),
-                      PopupMenuItem(child: Text('Linked devices'), value: 2),
-                      PopupMenuItem(child: Text('Starred Messages'), value: 3),
-                      PopupMenuItem(child: Text('Settings'), value: 4),
-                      PopupMenuItem(child: Text('Log out'), value: 5),
+                      const PopupMenuItem(child: Text('Linked devices'), value: 2),
+                      const PopupMenuItem(child: Text('Starred Messages'), value: 3),
+                      const PopupMenuItem(child: Text('Settings'), value: 4),
+                      const PopupMenuItem(child: Text('Log out'), value: 5),
                     ])
           ],
           bottom: TabBar(tabs: [
-            Container(height: 30, child: Icon(Icons.camera_alt)),
+            Container(height: 30, child: const Icon(Icons.camera_alt)),
             Container(
               height: 30,
-              child: Text(
+              child: const Text(
                 'CHATS',
                 style: TextStyle(
                     fontFamily: 'Roboto',
@@ -52,7 +52,7 @@ class _HomePageState extends State<HomePage> {
             ),
             Container(
               height: 30,
-              child: Text(
+              child: const Text(
                 'STATUS',
                 style: TextStyle(
                     fontFamily: 'Roboto',
@@ -62,7 +62,7 @@ class _HomePageState extends State<HomePage> {
             ),
             Container(
               height: 30,
-              child: Text(
+              child: const Text(
                 'CALLS',
                 style: TextStyle(
                     fontFamily: 'Roboto',
@@ -75,14 +75,14 @@ class _HomePageState extends State<HomePage> {
         body: TabBarView(children: [
           //CAMERA
 
-          Center(child: Text('Camera will be opening soon!')),
+          const Center(child: Text('Camera will be opening soon!')),
 
           //CHATS
 
           ListView.builder(
             itemCount: 20,
             itemBuilder: (context, index) {
-              return ListTile(
+              return const ListTile(
                 leading: CircleAvatar(
                     backgroundImage:
                         AssetImage('assets/images/WhatsappLogo.png')),
@@ -98,7 +98,7 @@ class _HomePageState extends State<HomePage> {
 
           ListView(
             children: [
-              ListTile(
+              const ListTile(
                 leading: CircleAvatar(
                     backgroundImage:
                         AssetImage('assets/images/WhatsappLogo.png')),
@@ -110,26 +110,26 @@ class _HomePageState extends State<HomePage> {
                     style: TextStyle(
                         fontWeight: FontWeight.bold, color: Colors.grey)),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 15),
                 child: Row(
                   children: [
-                    Text('Recent updates',
+                    const Text('Recent updates',
                         style: TextStyle(
                             fontWeight: FontWeight.bold, color: Colors.grey))
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
 
               // 1ST STATUS
 
-              ListTile(
+              const ListTile(
                 leading: CircleAvatar(
                     backgroundImage:
                         AssetImage('assets/images/WhatsappLogo.png')),
@@ -144,7 +144,7 @@ class _HomePageState extends State<HomePage> {
 
               // 2ND STATUS
 
-              ListTile(
+              const ListTile(
                 leading: CircleAvatar(
                     backgroundImage:
                         AssetImage('assets/images/WhatsappLogo.png')),
@@ -159,7 +159,7 @@ class _HomePageState extends State<HomePage> {
 
               // 3RD STATUS
 
-              ListTile(
+              const ListTile(
                 leading: CircleAvatar(
                     backgroundImage:
                         AssetImage('assets/images/WhatsappLogo.png')),
@@ -174,7 +174,7 @@ class _HomePageState extends State<HomePage> {
 
               // 4TH STATUS
 
-              ListTile(
+              const ListTile(
                 leading: CircleAvatar(
                     backgroundImage:
                         AssetImage('assets/images/WhatsappLogo.png')),
@@ -189,7 +189,7 @@ class _HomePageState extends State<HomePage> {
 
               // 5TH STATUS
 
-              ListTile(
+              const ListTile(
                 leading: CircleAvatar(
                     backgroundImage:
                         AssetImage('assets/images/WhatsappLogo.png')),
@@ -209,7 +209,7 @@ class _HomePageState extends State<HomePage> {
           ListView.builder(
             itemCount: 20,
             itemBuilder: (context, index) {
-              return ListTile(
+              return const ListTile(
                 leading: CircleAvatar(
                     backgroundImage:
                         AssetImage('assets/images/WhatsappLogo.png')),
